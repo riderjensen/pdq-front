@@ -48,6 +48,8 @@ class App extends Component {
 		return (<div className="App" >
 			<header className="App-header" >
 				{this.state.loading ? <Spinner /> : <button onClick={() => {
+					const socket = socketIOClient(this.state.endpoint);
+					socket.emit('getInfo');
 					const state = { ...this.state };
 					state.loading = true;
 					this.setState({
