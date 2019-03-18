@@ -10,7 +10,7 @@ class App extends Component {
 		info: {
 
 		},
-		endpoint: 'https://protected-crag-50233.herokuapp.com',
+		endpoint: 'https://intense-scrubland-81670.herokuapp.com',
 		loading: false,
 		error: null
 	}
@@ -53,7 +53,7 @@ class App extends Component {
 					this.setState({
 						...state
 					})
-					axios.get('http://localhost:8080').then(resp => {
+					axios.get('https://intense-scrubland-81670.herokuapp.com').then(resp => {
 						const axiosState = { ...this.state };
 						axiosState.info = resp.data;
 						console.log(resp)
